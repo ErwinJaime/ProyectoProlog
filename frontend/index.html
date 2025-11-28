@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibroScope - Buscador de Libros</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>📚 LibroScope</h1>
+                <p>Descubre tu próxima lectura favorita</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section">
+                <div class="search-card">
+                    <h2>Buscar Libros</h2>
+                    <div class="search-form">
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Escribe tu búsqueda..."
+                                aria-label="Texto de búsqueda"
+                            >
+                            <select id="searchType" aria-label="Tipo de búsqueda">
+                                <option value="palabra">Palabra clave</option>
+                                <option value="genero">Género</option>
+                                <option value="autor">Autor</option>
+                            </select>
+                            <button id="searchBtn" onclick="buscarLibros()">
+                                <span class="btn-text">Buscar</span>
+                                <span class="btn-loader" style="display: none;">Buscando...</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="serverStatus" class="server-status">
+                        <div class="status-offline">⚫ Servidor no conectado</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div id="resultsContainer" class="results-container">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">🔍</div>
+                        <h3>Comienza tu búsqueda</h3>
+                        <p>Usa el formulario arriba para buscar libros por título, autor o género</p>
+                        <div class="connection-help">
+                            <p><strong>¿Problemas de conexión?</strong></p>
+                            <ol>
+                                <li>Asegúrate de que el servidor Prolog esté ejecutándose</li>
+                                <li>Verifica que esté en el puerto 3000</li>
+                                <li>Ejecuta: <code>?- iniciar_servidor.</code> en SWI-Prolog</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>LibroScope - Sistema de búsqueda de libros con Prolog</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
