@@ -112,7 +112,7 @@ class LibroScope {
         container.innerHTML = `
             <div class="welcome-message">
                 <div class="welcome-icon">🔍</div>
-                <h3>Comienza tu busqueda</h3>
+                <h3>Comienza tu búsqueda</h3>
                 <p>Usa el formulario arriba para buscar libros por título, autor o género</p>
             </div>
         `;
@@ -125,7 +125,7 @@ class LibroScope {
             container.innerHTML = `
                 <div class="no-results">
                     <h3>📖 No se encontraron libros</h3>
-                    <p>No hay resultados para "${terminoBusqueda}". Intenta con otros terminos.</p>
+                    <p>No hay resultados para "${terminoBusqueda}". Intenta con otros términos.</p>
                 </div>
             `;
             return;
